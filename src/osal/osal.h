@@ -49,6 +49,8 @@ typedef void (*osal_task_func_t)( void * );
 
 #if CFG_TUSB_OS == OPT_OS_NONE
   #include "osal_none.h"
+#elif CFG_TUSB_OS == OPT_OS_CHIBIOS
+  #include "osal_chibios.h"
 #elif CFG_TUSB_OS == OPT_OS_FREERTOS
   #include "osal_freertos.h"
 #elif CFG_TUSB_OS == OPT_OS_MYNEWT
